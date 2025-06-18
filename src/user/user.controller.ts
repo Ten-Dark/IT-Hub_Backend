@@ -12,11 +12,12 @@ import {
 	UsePipes,
 	ValidationPipe,
 } from '@nestjs/common'
-import { UserDecorator } from './decorators/user.decorator'
+
 import { UserService } from './user.service'
 import { Auth } from 'src/auth/decorators/Auth.decorator'
 import { UpdateDto } from './dto/update.dto'
 import { IdValidationPipe } from 'src/pipes/id.validation.pipe'
+import { UserDecorator } from './decorators/user.decorator'
 
 
 @Controller('users')
@@ -25,8 +26,8 @@ export class UserController {
 
 	@Get('profile')
 	@Auth()
-	async getProfile(@UserDecorator('id') _id: string) {
-		return this.userService.byId(_id)
+	async getProfile(@UserDecorator('id') id: string) {
+		return this.userService.byId(id)
 	}
 
 	@UsePipes(new ValidationPipe())

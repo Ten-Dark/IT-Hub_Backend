@@ -14,7 +14,8 @@ import {
 import { FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
 import { FilesService } from './files.service';
 import { FileResponse } from './dto/file.response';
-import { Auth } from 'src/auth/decorators/auth.decorator';
+import { Auth } from '../auth/decorators/auth.decorator'
+
 
 @Controller('files')
 export class FilesController {
