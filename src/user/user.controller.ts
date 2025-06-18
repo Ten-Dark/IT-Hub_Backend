@@ -14,10 +14,11 @@ import {
 } from '@nestjs/common'
 
 import { UserService } from './user.service'
-import { Auth } from 'src/auth/decorators/Auth.decorator'
+
 import { UpdateDto } from './dto/update.dto'
 import { IdValidationPipe } from 'src/pipes/id.validation.pipe'
 import { UserDecorator } from './decorators/user.decorator'
+import { Auth } from '../auth/decorators/auth.decorator'
 
 
 @Controller('users')
