@@ -7,7 +7,6 @@ node_modules/
 .pnp.js
 .idea
 .eslintcache
-/uploads
 front/coverage
 
 # next.js
@@ -22,7 +21,7 @@ dist
 
 # misc
 .DS_Store
-.env
+env
 .env.local
 .env.development.local
 .env.test.local
